@@ -37,6 +37,7 @@
       myFetch('welcome');
     }
 
+    // 글목록 가져와서 nav 밑에 끼워넣기
     fetch('itemlist').then(
       (res) => {
         res.text().then(
@@ -45,7 +46,7 @@
             var itemArray = text.split(',');
             var itemTags = '';
             for(let i = 0; i < itemArray.length; i++) {
-              itemTags += `<li><a href="#!${itemArray[i]}" onclick="myFetch('${itemArray[i]}');">${itemArray[i]}</a></li>`
+              itemTags += `<li><a href="#!${itemArray[i]}" onclick="myFetch('${itemArray[i]}');">${itemArray[i]}</a></li>`;
             }
             document.querySelector('#nav').innerHTML = itemTags;
           }

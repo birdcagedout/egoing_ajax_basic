@@ -10,10 +10,15 @@
 		function myFetch(target) {
 			fetch(target).then(
 				(res) => {
+					// 해당 자원이 없는 경우(404는 number임)
+					if(res.status === 404) {
+						document.querySelector('article').innerHTML = '404 Not Found';
+						return false;
+					}
 					res.text().then(
 						(text) => {
 							// alert(text);
-							document.querySelector('article').innerHTML = 	text;
+							document.querySelector('article').innerHTML = text;
 						}
 					)
 				}

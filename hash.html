@@ -1,0 +1,31 @@
+<!-- 
+	URL 뒤에 #fragment가 붙는 형태의 URL을 만들면서
+	해당 id를 갖는 요소의 위치로 이동시키는 것이 가능
+	==> ajax로 다른 페이지를 로드할 수도 있다.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Hash 연습</title>
+	<style>
+		p {
+			font-size: 52px;
+			}
+	</style>
+</head>
+<body>
+	<a href="#three">3번째문단</a>
+	<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere dolores, quibusdam, minus illo sapiente non asperiores sequi neque voluptatum vitae maiores iure nisi explicabo assumenda pariatur natus? Eius, quis quae!</p>
+	<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere dolores, quibusdam, minus illo sapiente non asperiores sequi neque voluptatum vitae maiores iure nisi explicabo assumenda pariatur natus? Eius, quis quae!</p>
+	<p id="three">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere dolores, quibusdam, minus illo sapiente non asperiores sequi neque voluptatum vitae maiores iure nisi explicabo assumenda pariatur natus? Eius, quis quae!</p>
+	<script>
+		if(window.location.hash) {
+			console.log(location.hash.substring(1));		// three
+		} else {
+
+		}
+	</script>
+</body>
+</html>
